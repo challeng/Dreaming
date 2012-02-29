@@ -1,0 +1,20 @@
+// Place all the styles related to the resources controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+table, td, th
+{
+font-family:calibri;
+border:collapse:collapse;
+}
+
+th
+{
+background-color:#b9c9fe;
+color:#006add;
+}
+
+td
+{
+background-color:#e8edff;
+color:#666699;
+}
