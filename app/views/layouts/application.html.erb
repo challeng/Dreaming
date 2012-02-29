@@ -6,11 +6,43 @@
   <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
 
+	<style type="text/css" media="screen">
+
+
+     div#banner { 
+       position: absolute;
+ 	   padding: 0px;
+       top: 0; 
+       left: 0; 
+       background-color: #DDFFFF; 
+       width: 100%;
+ 	   height: 17%;
+     }
+     div#banner-content { 
+       width: 600px; 
+       margin: 0 auto; 
+		padding: 0px;
+       border: 1px solid #000;
+     }
+     div#main-content { 
+       padding-top: 140px;
+    }
+    </style>
+
 </head>
 <body>
+	<div id="banner">
+		<h1>Dreaming!</h1>
+    	<div id="banner-content">
+    		<%= render 'layouts/header' %>
+    	</div>
+  	</div>
+  <div id="main-content">
+
+  </div>
 
     <div class="container">
-      <%= render 'layouts/header' %>
+
       <section class="round">
 	
 		<h1><%= @title %></h1>
