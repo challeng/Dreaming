@@ -1,10 +1,13 @@
 // Place all the styles related to the resources controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*
 table, td, th
 {
 font-family:calibri;
 border:collapse:collapse;
+
 }
 
 th
@@ -18,3 +21,13 @@ td
 background-color:#e8edff;
 color:#666699;
 }
+*/
+
+
+table thead th { border-bottom: solid 3px #CCC; }
+table tr td { padding: 10px }
+
+tr:hover { background: #09DDAB; }
+
+.shaded { background-color: #DDD; }
+.unshaded { background-color: #FFF; }
