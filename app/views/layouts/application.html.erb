@@ -73,10 +73,10 @@
           <a class="brand" href="/"> Lucid Dreaming</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/forums">Forums</a></li>
-              <li><a href="/resources">Resources</a></li>
+              <li class= <%= @activeHome %> ><a href="/">Home</a></li>
+              <li class= <%= @activeAbout %>><a href="/about">About</a></li>
+              <li class= <%= @activeForum %>><a href="/forums">Forums</a></li>
+              <li class= <%= @activeResources %>><a href="/resources">Resources</a></li>
 			  <li>  "                      " </li>
 			  <li>  "                      ""</li>
 			  <li>  "                      ""</li>
@@ -92,13 +92,21 @@
 			  <li>  "                      ""</li>
 			  <li>  "                      ""</li>
 			  <li>  "                      ""</li>
-              <li><a href="/#">Sign Up</a></li>
-              <li><a href="/#">Sign In</a></li>
+			  <% if user_signed_in? %>
+				<li><a href="/profile">Profile</a></li>
+				<li><%= link_to "Sign Out", "/users/sign_out", :method => :delete %></li>
+			  <% else %>
+                <li><a href="/users/sign_up">Sign Up</a></li>
+                <li><a href="/users/sign_in">Sign In</a></li>
+			  <% end %>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
+
+	<p class="notice"><%= notice %></p>
+	 <p class="alert"><%= alert %></p>
 
     <div class="container">
 

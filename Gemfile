@@ -7,7 +7,12 @@ gem 'rails', '3.2.1'
 
 
 
+gem 'forum_monster'
 gem 'json'
+gem 'omniauth-twitter'
+gem 'devise'
+gem 'twitter'
+
 
 group :development, :test do
   gem 'sqlite3'

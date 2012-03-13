@@ -1,1 +1,38 @@
-<p>Lucid dreaming home page.</p>
+
+
+<% if user_signed_in? %>
+
+	
+
+	<!-- Main hero unit for a primary marketing message or call to action -->
+	<div class="hero-unit">
+	  <h1>Lucid Dreaming is yours!</h1>
+
+		<br/>
+
+	  <p>Welcome, <%= current_user.email %>. Head to your profile to see what you can do!</p>
+
+		<br/>
+
+	  <p><a class="btn btn-primary btn-large" href="/profile"> Profile &raquo;</a></p>
+
+	</div>
+
+<% else %>
+	
+
+	<!-- Main hero unit for a primary marketing message or call to action -->
+	<div class="hero-unit">
+	  <h1>Lucid Dreaming is yours!</h1>
+
+		<br/>
+
+	  <p>Lucid Dreaming is the state of being aware that you are dreaming. With just a little practice, one can be able to have lucid dreams as often as they want and from there learn to 		control them. Lucid dreaming is also fun and free. Are you ready to dive into your world of 			 dreams?</p>
+
+		<br/>
+
+	  <p><a class="btn btn-primary btn-large">Start Dreaming Today! &raquo;</a></p>
+
+	</div>
+
+<% end %>
