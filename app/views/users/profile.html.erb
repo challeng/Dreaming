@@ -1,23 +1,24 @@
 <style type=text/css>
 A:link {
- COLOR: red 
+ COLOR: blue ;
 }
+
+
 
 </style>
 
 <h1>Welcome to your Profile!</h1>
 <hr>
-<strong>First Name: </strong><%=@user.first_name  %><br/>
-<strong>Last Name: </strong><%=@user.last_name  %><br/>
-<strong>Email: </strong><%=@user.email  %><br/>
+<strong>Name: </strong><%=@user.first_name  %> <%= @user.last_name %><br/>
 <strong>Location: </strong><%=@user.location  %><br/>
 <strong>Bio: </strong><%=@user.bio  %><br/>
 
+<p class="lucid">
 <% if @user.been_lucid %> 
-	<p><%= @user.first_name %> has gone lucid before!</p>
+	<p class="lucid"><%= @user.first_name %> has gone lucid before!</p>
 <% else %>
-	<p><%= @user.first_name %> has not been lucid yet, but soon!</p>
+	<p class="lucid"><%= @user.first_name %> has not been lucid yet, but soon!</p>
 <% end %>
-
+</p>
 
 <h3 color="red"><%= link_to 'My Dream Journal', '#' %></h3>

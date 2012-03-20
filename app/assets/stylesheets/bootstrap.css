@@ -2526,7 +2526,7 @@ button.btn.small, input[type="submit"].btn.small {
   color: #999999;
 }
 .navbar .navbar-text a:hover {
-  color: #ffffff;
+  color: #333333;
   background-color: transparent;
 }
 .navbar .btn, .navbar .btn-group {
