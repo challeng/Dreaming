@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :authenticate_user!, :except => 'sign_up'
+  #before_filter :authenticate_user!, :except => 'sign_up'
   
   def profile
     @user = current_user

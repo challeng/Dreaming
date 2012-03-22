@@ -1,7 +1,8 @@
 LucidDreaming::Application.routes.draw do
   
-  devise_for :users
-
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", 
+                                     :registrations => "registrations"}
+  
   resources :categories, :except => [:index, :show]
   resources :forums, :except => :index do
     resources :topics, :shallow => true, :except => :index do
@@ -19,5 +20,10 @@ LucidDreaming::Application.routes.draw do
   get '/resources' => 'resources#index'
   get '/forums'  => 'pages#forums'
   get '/profile' => 'users#profile'
+  
+  devise_scope :user do
+    match '/users/sign_up_from_twitter' => 'registrations#new_from_twitter'
+  end
+  #get '/users/sign_up_from_twitter' => 'registrations#new_from_twitter'
   
 end
