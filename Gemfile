@@ -6,6 +6,7 @@ gem 'rails', '3.2.1'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 
+# gem "twitter-bootstrap-rails", "~> 2.0rc0"
 
 gem 'forum_monster'
 gem 'json'
